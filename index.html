@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don't Gamble - 도박 예방 퀴즈</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Don't Gamble - 도박 예방 퀴즈</h1>
+        
+        <!-- 프로필 입력 화면 -->
+        <div id="profile-section" class="section">
+            <h2>프로필 생성</h2>
+            <input type="text" id="student-id" placeholder="학번 입력">
+            <input type="text" id="student-name" placeholder="이름 입력">
+            <button onclick="createProfile()">프로필 생성</button>
+        </div>
+
+        <!-- 팀 선택 화면 -->
+        <div id="team-section" class="section hidden">
+            <h2>팀 선택</h2>
+            <div id="team-list"></div>
+            <input type="text" id="new-team-name" placeholder="새 팀 이름 입력">
+            <button onclick="createTeam()">새 팀 생성</button>
+        </div>
+
+        <!-- 퀴즈 화면 -->
+        <div id="quiz-section" class="section hidden">
+            <h2 id="team-name-display"></h2>
+            <p id="question-text">질문이 여기에 표시됩니다.</p>
+            <div id="options">
+                <!-- 옵션 버튼들 -->
+            </div>
+            <button id="next-btn" onclick="nextQuestion()">다음 질문</button>
+        </div>
+
+        <!-- 결과 화면 -->
+        <div id="result-section" class="section hidden">
+            <h2>퀴즈 결과</h2>
+            <div id="team-results"></div>
+            <button onclick="restartQuiz()">다시 시작</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
